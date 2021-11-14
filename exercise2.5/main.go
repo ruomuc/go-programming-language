@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+// 练习2.5：使用 x&(x-1) 可以清除 x 最右边的非零位，
+// 利用该特点写一个 PopCount，然后评价它的性能。
 func main() {
 	fmt.Println(PopCount(9))
 	fmt.Println(PopCount2(9))
