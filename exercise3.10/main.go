@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"strings"
 )
 
 // 练习3.10：编写一个非递归的 comma 函数，
@@ -13,13 +14,13 @@ func main() {
 }
 
 func comma(s string) string {
-	var res string
+	var res []string
 	buf := bytes.NewBufferString(s)
 
 	for buf.Len() > 0 {
 		b := buf.Next(3)
-		res += string(b) + ","
+		res = append(res, string(b))
 	}
 
-	return res
+	return strings.Join(res, ",")
 }
