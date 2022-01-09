@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 // 练习4.3：重写reverse函数，使用数组指针代替slice。
+// tips:  在 golang 中，建立了 arrPtr := &arr 这种类似地址关系后，* 允许不写。
 func main() {
 	nums := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 	reverse(&nums)
