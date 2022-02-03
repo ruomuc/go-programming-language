@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	MinimumIdx    = 1
+	Minimum       = 1
 	Maximum       = 2022
 	StoreFileName = "xkcd-info.json"
 )
