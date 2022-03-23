@@ -19,14 +19,13 @@ var (
 
 type dir struct {
 	idx       int
-	name      string
 	filesSize int64
 }
 
 func main() {
 	// 确定初始目录
 	flag.Parse()
-	roots := os.Args[1:]
+	roots := flag.Args()
 	if len(roots) == 0 {
 		roots = []string{"."}
 	}
@@ -77,7 +76,7 @@ func walkDir(dirName string, idx int, dirsChan chan<- dir) {
 			subDir := filepath.Join(dirName, entry.Name())
 			walkDir(subDir, idx, dirsChan)
 		} else {
-			dirsChan <- dir{idx, dirName, entry.Size()}
+			dirsChan <- dir{idx, entry.Size()}
 		}
 	}
 }
