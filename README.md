@@ -1,4 +1,4 @@
-## the go programming language
+## The Go Programming Language
 
 《The Go Programming Language》 习题答案
 
